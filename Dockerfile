@@ -7,10 +7,6 @@ MAINTAINER Dong Li (hi@lidong.me)
 # 更新升级，安装必备软件
 RUN apt update \
   && apt -y upgrade \
-  && apt install -y curl supervisor \
-  && mkdir -p /var/log/supervisor \
+  && apt install -y curl wget \
   && apt-get autoremove \ 
   && rm -rf /var/lib/apt/lists/*
-
-COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
-CMD ["/usr/bin/supervisord"]
