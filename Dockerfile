@@ -1,5 +1,5 @@
 # 设置继承自ubuntu官方镜像
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 
 # 下面是一些创建者的基本信息
 MAINTAINER Dong Li (hi@lidong.me)
@@ -8,5 +8,5 @@ MAINTAINER Dong Li (hi@lidong.me)
 RUN apt update \
   && apt -y upgrade \
   && apt install -y curl wget \
-  && apt-get autoremove \ 
+  && apt-get autoremove \
   && rm -rf /var/lib/apt/lists/*
